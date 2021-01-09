@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+  <div id="app-2">
+    <span v-bind:title="message">
+      mouse hover here stop some second,you can see some tip
+    </span>
+  </div>
+  <div id="app-3">
+    <p v-if="seen" v-on:click='changeSeen'>
+      you can see me,click me,I will be hide
+    </p>
+  </div>
+  <div id="app-4">
+    <ol>
+      <todo-item v-for="todo in todos" v-bind:key='todo.id' v-bind:todo='todo' />
+    </ol>
+  </div>
+  <div id="app-5">
+    <input type="text" v-bind:value="inputValue" v-on:input="handleInput" />
+    <span>
+      {{ inputValue }}
+    </span>
+  </div>
+
+
+  <script src="vue.js" text="text/javascript" charset="utf-8"></script>
+</body>
+</html>
